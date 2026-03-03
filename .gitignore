@@ -8,3 +8,18 @@ wheels/
 
 # Virtual environments
 .venv
+
+# Environment variables
+.env
+
+# VS Code
+.vscode/
+
+# Migrations cache
+*.log
+
+# Mac
+.DS_Store
+
+#Database files
+db.sqlite3
