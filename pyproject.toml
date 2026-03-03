@@ -1,0 +1,42 @@
+[project]
+name = "bookkeeper"
+version = "0.1.0"
+description = "Bookkeeper backend built with Django"
+requires-python = ">=3.12"
+
+# ------------------------------------
+# RUFF CONFIGURATION
+# ------------------------------------
+
+[tool.ruff]
+line-length = 88
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B"]
+ignore = []
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+
+# ------------------------------------
+# MYPY CONFIGURATION
+# ------------------------------------
+
+[tool.mypy]
+python_version = "3.12"
+strict = true
+ignore_missing_imports = true
+plugins = ["mypy_django_plugin.main"]
+
+[tool.django-stubs]
+django_settings_module = "configuration.settings"
+
+# ------------------------------------
+# PYTEST CONFIGURATION
+# ------------------------------------
+
+[tool.pytest.ini_options]
+DJANGO_SETTINGS_MODULE = "configuration.settings"
+python_files = ["tests.py", "test_*.py", "*_tests.py"]
