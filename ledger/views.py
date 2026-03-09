@@ -4,4 +4,4 @@ from django.shortcuts import render
 # Create your views here.
 
 def ledgerHome(request: HttpRequest) -> HttpResponse:
-    return render(request, 'ledger/ledgerhome.html')
+    return render(request, 'ledger/pages/ledgerhome.html')
