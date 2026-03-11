@@ -1,15 +1,17 @@
 {% include 'ledger/partials/head.html' %}
 
 <body>
-    <header class="main-header-container">
-        <div class="main-header">
-            <h1>
-                <a href="/">
-                    <i class="fa-brands fa-web-awesome"></i>
-                    <span>BookKeeper {{ name }}</span>
-                </a>
-            </h1>
+    {% include 'ledger/partials/header.html' %}
+    {% include "ledger/partials/search.html" %}
+
+    <main class="main-content-container">
+        <div class="main-content main-content-list container">
+            <div class="temp"></div>
+            <div class="temp"></div>
+            <div class="temp"></div>
+
         </div>
-    </header>
+    </main>
+    
 </body>
 </html>

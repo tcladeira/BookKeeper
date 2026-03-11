@@ -1,25 +1,186 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/fontawesome.min.css" integrity="sha512-M5Kq4YVQrjg5c2wsZSn27Dkfm/2ALfxmun0vUE3mPiJyK53hQBHYCVAtvMYEC7ZXmYLg8DVG4tF8gD27WmDbsg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/brands.min.css" integrity="sha512-WxpJXPm/Is1a/dzEdhdaoajpgizHQimaLGL/QqUIAjIihlQqlPQb1V9vkGs9+VzXD7rgI6O+UsSKl4u5K36Ydw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/solid.min.css" integrity="sha512-EHa6vH03/Ty92WahM0/tet1Qicl76zihDCkBnFhN3kFGQkC+mc86d7V+6y2ypiLbk3h0beZAGdUpzfMcb06cMg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/fontawesome.min.css"
+        integrity="sha512-M5Kq4YVQrjg5c2wsZSn27Dkfm/2ALfxmun0vUE3mPiJyK53hQBHYCVAtvMYEC7ZXmYLg8DVG4tF8gD27WmDbsg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/brands.min.css"
+        integrity="sha512-WxpJXPm/Is1a/dzEdhdaoajpgizHQimaLGL/QqUIAjIihlQqlPQb1V9vkGs9+VzXD7rgI6O+UsSKl4u5K36Ydw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/solid.min.css"
+        integrity="sha512-EHa6vH03/Ty92WahM0/tet1Qicl76zihDCkBnFhN3kFGQkC+mc86d7V+6y2ypiLbk3h0beZAGdUpzfMcb06cMg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
 
     <title>BookKeeper</title>
     <style>
-        *{
+        :root {
+
+            /* Base colors */
+            --color-white: #ffffff;
+            --color-black: #000000;
+
+            /* Grays */
+            --color-gray-100: #f5f5f5;
+            --color-gray-200: #e5e5e5;
+            --color-gray-300: #d4d4d4;
+            --color-gray-400: #a3a3a3;
+            --color-gray-500: #737373;
+            --color-gray-600: #525252;
+            --color-gray-700: #404040;
+            --color-gray-800: #262626;
+            --color-gray-900: #171717;
+
+            /* Primary */
+            --color-primary: #2563eb;
+            --color-primary-light: #60a5fa;
+            --color-primary-dark: #1e40af;
+
+            /* Secondary */
+            --color-secondary: #7c3aed;
+            --color-secondary-light: #a78bfa;
+            --color-secondary-dark: #5b21b6;
+
+            /* Success */
+            --color-success: #16a34a;
+            --color-success-light: #4ade80;
+            --color-success-dark: #166534;
+
+            /* Warning */
+            --color-warning: #f59e0b;
+            --color-warning-light: #fcd34d;
+            --color-warning-dark: #b45309;
+
+            /* Danger */
+            --color-danger: #dc2626;
+            --color-danger-light: #f87171;
+            --color-danger-dark: #7f1d1d;
+
+            /* Info */
+            --color-info: #0ea5e9;
+            --color-info-light: #38bdf8;
+            --color-info-dark: #0369a1;
+
+            /* Background */
+            --color-background: #ffffff;
+            --color-background-alt: #f9fafb;
+
+            /* Text */
+            --color-text-primary: #111827;
+            --color-text-secondary: #6b7280;
+            --color-text-muted: #9ca3af;
+
+            /* Border */
+            --color-border: #e5e7eb;
+
+            /* Font */
+            --font-heading: 'Roboto Slab', serif;
+            --font-primary: sans-serif;
+
+        }
+
+        * {
             padding: 0;
             margin: 0;
             box-sizing: border-box;
         }
+
         html {
             font-size: 62.5%;
         }
-        body{
-            font-size: 1.6rem;
+
+        body {
+            font-size: 1rem;
+            background-color: var(--color-gray-200);
+            font-family: var(--font-primary);
+        }
+
+        .container {
+            max-width: 144rem;
+            background-color: var(--color-black);
+            margin: 0 auto;
+        }
+
+        .main-header-container {
+            background: var(--color-background-alt);
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5 {
+            font-family: var(--font-heading);
+            margin-bottom: 1rem;
+        }
+
+        .main-logo {
+            font-size: 4rem;
+            color: var(--color-gray-200);
+            text-decoration: none;
+            display: flex;
+            flex-direction: row nowrap;
+            align-items: center;
+            justify-content: center;
+            width: fit-content;
+            margin: 0 auto;
+        }
+
+        .main-logo-ico {
+            margin-right: 1rem;
+        }
+
+        .search-form {
+            border: 1px solid var(--color-info-dark);
+            max-width: 400px;
+            padding: 0.75rem;
+            border-radius: 0.4rem;
+            position: relative;
+            margin: 0 auto;
+        }
+
+        .search-button,
+        .search-input {
+            background: none;
+            border: none;
+            outline: none;
+
+
+        }
+
+        .search-input {
+            width: 100%;
+            padding-right: 1rem;
+        }
+
+        .search-button {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+        }
+
+        .search-form:focus-within {
+            border-color: var(--color-secondary-light);
+            background-color: var(--color-background);
+        }
+
+        .main-content {
+            padding-top: 0;
+            height: 400rem;
+        }
+
+        .main-content-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 1rem;
         }
     </style>
 </head>
